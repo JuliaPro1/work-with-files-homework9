@@ -9,7 +9,6 @@ public class Author {
     private int totalQuantity;
     private List<String> books;
 
-
     public String getName() {
         return name;
     }

@@ -28,6 +28,7 @@ public class JsonTest {
             assertEquals(24236, author.getId());
             assertEquals(114.36, author.getAveragePriceBook());
             assertEquals(51, author.getTotalQuantity());
+
             assertNotNull(author.getBooks());
             assertEquals(3, author.getBooks().size());
             assertTrue(author.getBooks().containsAll(List.of("The Financier", "Sister Carrie", "The Titan")));
