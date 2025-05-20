@@ -1,5 +1,4 @@
 package author;
-
 import java.util.List;
 
 public class Author {
