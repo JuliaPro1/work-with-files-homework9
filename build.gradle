@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.ulyaprohorofa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation (
+            'com.codeborne:selenide:7.9.2',
+            'org.junit.jupiter:junit-jupiter:5.10.0',
+            'commons-io:commons-io:2.19.0',
+            'com.codeborne:pdf-test:1.9.2',
+            'com.codeborne:xls-test:1.4.3',
+            'com.opencsv:opencsv:5.11',
+            'org.assertj:assertj-core:3.27.3',
+            'com.fasterxml.jackson.core:jackson-core:2.13.1',
+            'com.fasterxml.jackson.core:jackson-annotations:2.13.1',
+            'com.fasterxml.jackson.core:jackson-databind:2.14.1'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
