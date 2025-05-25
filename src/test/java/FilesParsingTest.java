@@ -31,7 +31,7 @@ public class FilesParsingTest {
                 if (entry.getName().endsWith(".pdf")) {
                     pdfFound = true;
                     PDF pdf = new PDF(zis);
-                    assertThat(pdfFound).isTrue();
+
                     assertThat(pdf.creator).contains("Writer");
                     assertThat(pdf.numberOfPages).isEqualTo(4);
                     /* JUnit's  asserts
@@ -40,6 +40,7 @@ public class FilesParsingTest {
                     */
                 }
             }
+            assertThat(pdfFound).isTrue();
         }
 
     }
@@ -68,7 +69,6 @@ public class FilesParsingTest {
                             .getCell(6)
                             .getNumericCellValue();
 
-                    assertThat(xlsxFound).isTrue();
                     assertThat(actualValueString).contains("Regular Air");
                     assertThat(actualValueDouble).isEqualTo(9.11);
                     /*JUnit's  asserts
@@ -77,6 +77,7 @@ public class FilesParsingTest {
                      */
                 }
             }
+            assertThat(xlsxFound).isTrue();
         }
     }
 
@@ -100,9 +101,9 @@ public class FilesParsingTest {
                             new String[]{"Kevin Millar", "BAL", "First Baseman"},
                             new String[]{"Chris Gomez", "BAL", "First Baseman"}
                     );
-                    assertThat(scvFound).isTrue();
                 }
             }
+            assertThat(scvFound).isTrue();
         }
     }
 }
